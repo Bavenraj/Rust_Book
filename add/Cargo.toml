@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+    "adders", "add_one",
+]
+

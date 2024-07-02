@@ -1,0 +1,7 @@
+Searching for to
+In the file poem.txt
+Case sensitive: no
+The not case sensitive output is executed: Are you nobody, too?
+The not case sensitive output is executed: How dreary to be somebody!
+The not case sensitive output is executed: To tell your name the livelong day
+The not case sensitive output is executed: To an admiring bog!
