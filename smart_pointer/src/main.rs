@@ -27,6 +27,9 @@ impl<T> Deref for MyBox<T>{
         &self.0
     }
 }
+fn hello(name: &str) {
+    println!("Hello, {name}!");
+}
 fn main() {
     use crate::List::{Cons, Nil};
     let b = Box::new(5);
@@ -54,4 +57,8 @@ fn main() {
     let a2 = &a1;
     //let a3 = *a2.deref();
     println!("{:p}, {}, {}", a2, a1, a2.deref());
+
+    let m = MyBox::new(String::from("Rust"));
+    hello(&m);
+    
 }
