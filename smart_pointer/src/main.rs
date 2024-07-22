@@ -58,7 +58,7 @@ fn main() {
     //let a3 = *a2.deref();
     println!("{:p}, {}, {}", a2, a1, a2.deref());
 
-    let m = MyBox::new(String::from("Rust"));
+    let m = MyBox::new(Strin::from("Rust"));
     hello(&m);
 
 }
