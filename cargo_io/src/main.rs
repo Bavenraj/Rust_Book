@@ -30,8 +30,6 @@ pub fn add_two(x: i32, y: i32) -> i32 {
     x + y + 1
 }
 
-
-
 fn main() {
     let red = PrimaryColor::Red;
     let yellow = PrimaryColor::Yellow;
