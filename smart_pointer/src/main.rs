@@ -1,4 +1,5 @@
 use std::ops::Deref;
+use std::fmt::Display;
 #[derive(Debug)]
 enum List {
     Cons(i32, Box<List>),
@@ -75,4 +76,6 @@ fn main() {
         data: String::from("my other stuff"),
     };
     println!("CustomSmartPointers created.");
+    println!("The current value before it goes out of scope ");
+
 }
