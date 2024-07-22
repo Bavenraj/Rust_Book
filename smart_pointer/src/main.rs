@@ -1,11 +1,9 @@
 use std::ops::Deref;
-
 #[derive(Debug)]
 enum List {
     Cons(i32, Box<List>),
     Nil,
 }
-
 enum Message {
     Quit,
     Move { x:i32, y:i32},
@@ -25,6 +23,15 @@ impl<T> Deref for MyBox<T>{
 
     fn deref(&self) -> &Self::Target {
         &self.0
+    }
+}
+struct CustomSmartPointer{
+    data: String,
+}
+
+impl Drop for CustomSmartPointer{
+    fn drop(&mut self){
+        println!("Dropping CustomSmartPointer with data '{}'!", self.data);
     }
 }
 fn hello(name: &str) {
@@ -58,7 +65,14 @@ fn main() {
     //let a3 = *a2.deref();
     println!("{:p}, {}, {}", a2, a1, a2.deref());
 
-    let m = MyBox::new(Strin::from("Rust"));
+    let m = MyBox::new(String::from("Rust"));
     hello(&m);
 
+    let c = CustomSmartPointer {
+        data: String::from("my stuff"),
+    };
+    let d = CustomSmartPointer {
+        data: String::from("my other stuff"),
+    };
+    println!("CustomSmartPointers created.");
 }
