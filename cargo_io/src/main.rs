@@ -1,8 +1,5 @@
-//! # My Crate
-//!
-//! `my_crate` is a collection of utilities to make performing certain
-//! calculations more convenient.
-
+use art::kinds::PrimaryColor;
+use art::utils::mix;
 /// Adds one to the number given.
 ///
 /// # Examples
@@ -33,8 +30,7 @@ pub fn add_two(x: i32, y: i32) -> i32 {
     x + y + 1
 }
 
-use art::kinds::PrimaryColor;
-use art::utils::mix;
+
 
 fn main() {
     let red = PrimaryColor::Red;
