@@ -39,12 +39,9 @@ fn ifvalue_in_cents(coin: Coin) -> u8 {
 }
 
 fn main(){
-    ///let x = 
     value_in_cents(Coin::Quarter(UsState::Alaska));
-    //let y = 
     value_in_cents(Coin::Penny);
     ifvalue_in_cents(Coin::Penny);
-    //println!("{x} and {y}");
     let five = Some(5);
     let six = plus_one(Some(90));
     println!("{:?}", six);
